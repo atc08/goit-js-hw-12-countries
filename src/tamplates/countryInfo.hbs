@@ -1,0 +1,10 @@
+{{#each this}}
+<p>{{name}}</p>
+<p>Capital: {{capital}}</p>
+<p>Population: {{population}}</p>
+<ul>Languages: {{#each languages}}
+  <li>{{this.name}}</li>
+  {{/each}}
+</ul>
+<img src="{{flag}}" alt="{{name}}">
+{{/each}}
