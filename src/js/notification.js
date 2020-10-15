@@ -28,7 +28,7 @@ const myNotice = () =>
   notice({
     text: 'Too many results. Please, specify) ',
     hide: true,
-    delay: 1000,
+    delay: 1500,
   });
 
 const myError = () =>
