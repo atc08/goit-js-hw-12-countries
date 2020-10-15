@@ -1,11 +1,11 @@
 import countryInfo from '../tamplates/countryInfo.hbs';
 import countryList from '../tamplates/countryList.hbs';
 import refs from '../js/refs';
-import { myAlert, mySuccess, myInfo, myNotice } from '../js/notification';
+import { myError, mySuccess, myInfo, myNotice } from '../js/notification';
 
-function inputMarkUp(data) {
+const inputMarkUp = data => {
   if (!data) {
-    myAlert();
+    myError();
     return;
   }
   if (data.length > 10) {
@@ -21,13 +21,13 @@ function inputMarkUp(data) {
       clearСountryList(),
       mySuccess();
   }
-}
+};
 
-function clearCountryInfo() {
+const clearCountryInfo = () => {
   refs.countryInfo.innerHTML = '';
-}
-function clearСountryList() {
+};
+const clearСountryList = () => {
   refs.countryList.innerHTML = '';
-}
+};
 
-export default inputMarkUp;
+export { inputMarkUp, clearСountryList, clearCountryInfo };
